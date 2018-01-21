@@ -1,6 +1,6 @@
 CXX := g++
 # TODO: remove -fpermissive
-CXXFLAGS := --std=c++14 -fpermissive
+CXXFLAGS := --std=c++14 -fpermissive -I./include
 LDFLAGS :=
 LDLIBS := -lpcap
 
