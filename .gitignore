@@ -1,3 +1,5 @@
 sheepwall
+unit_test
 *.o
 *.d
+tags

@@ -14,7 +14,12 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#include "http_parser.h"
 #include "sniff.h"
+
+using namespace std;
+
+HttpParser httpParser;
 
 void
 got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
@@ -244,6 +249,9 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	if (size_payload > 0) {
 			printf("   Payload (%d bytes):\n", size_payload);
 			print_payload(payload, size_payload);
+			try {
+				httpParser.Parse(payload, size_payload);
+			} catch (...) {}
 		}
 
 return;
@@ -260,7 +268,7 @@ int main(int argc, char **argv)
 	struct bpf_program fp;			/* compiled filter program (expression) */
 	bpf_u_int32 mask;			/* subnet mask */
 	bpf_u_int32 net;			/* ip */
-	int num_packets = 10;			/* number of packets to capture */
+	int num_packets = 0;			/* number of packets to capture */
 
 	print_app_banner();
 
