@@ -7,9 +7,14 @@ LDLIBS := -lpcap
 SOURCES=$(shell find src -name "*.cc")
 OBJECTS=$(addprefix build/, $(SOURCES:src/%.cc=%.o))
 
-.PHONY: all clean
+.PHONY: all 1900 clean
 
 all: build/sheepwall build/test/unit_test
+
+1900: CXX := /home/fatminmin/1900/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-g++
+1900: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
+1900: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib
+1900: build/sheepwall
 
 build/sheepwall: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
