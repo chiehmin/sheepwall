@@ -18,8 +18,8 @@ public:
 
 private:
 	std::string method_;
-	std::string host_;
 	std::string path_;
+	std::string host_;
 	std::string payload_;
 };
 

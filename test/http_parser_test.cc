@@ -4,12 +4,15 @@
 
 using namespace std;
 
-TEST(HttpParserTest, Parse)
+TEST(HttpParserTest, Parse_get_request)
 {
-	//arrange
-	const char* payload =
+	// arrange
+	// curl fatminmin.com/pages/about.html --trace-ascii -
+	const char payload[] =
 		"GET /pages/about.html HTTP/1.1\r\n"
-		"HOST: fatminmin.com\r\n"
+		"Host: fatminmin.com\r\n"
+		"User-Agent: curl/7.47.0\r\n"
+		"Accept: */*\r\n"
 		"\r\n";
 	const int len = strlen(payload);
 
@@ -18,6 +21,34 @@ TEST(HttpParserTest, Parse)
 	Http http = httpParser.Parse(payload, len);
 
 	// assert
+	EXPECT_EQ("get", http.GetMethod());
+	EXPECT_EQ("/pages/about.html", http.GetPath());
 	EXPECT_EQ("fatminmin.com", http.GetHost());
+	EXPECT_EQ("", http.GetPaylod());
+}
+
+TEST(HttpParserTest, Parse_post_requst)
+{
+	// curl -d "username=fatminmin&password=5566" -X POST "http://httpbin.org/post" --trace-ascii -
+	const char payload[] =
+		"POST /post HTTP/1.1\r\n"
+		"Host: httpbin.org\r\n"
+		"User-Agent: curl/7.47.0\r\n"
+		"Accept: */*\r\n"
+		"Content-Length: 32\r\n"
+		"Content-Type: application/x-www-form-urlencoded\r\n"
+		"\r\n"
+		"username=fatminmin&password=5566";
+	const int len = strlen(payload);
+
+	// act
+	HttpParser httpParser;
+	Http http = httpParser.Parse(payload, len);
+
+	// assert
+	EXPECT_EQ("post", http.GetMethod());
+	EXPECT_EQ("/post", http.GetPath());
+	EXPECT_EQ("httpbin.org", http.GetHost());
+	EXPECT_EQ("username=fatminmin&password=5566", http.GetPaylod());
 }
 
