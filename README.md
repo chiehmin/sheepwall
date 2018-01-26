@@ -17,10 +17,8 @@ forge](https://sourceforge.net/projects/dsgpl/?source=navbar).
 Just simply download it and extract it.
 
 ```
-$ curl -L
-https://nchc.dl.sourceforge.net/project/dsgpl/SRM%201.1%20Tool%20Chains/BROADCOM%20NORTHSTARPLUS%20Linux%203.6.5/gcc493_glibc220_hard-GPL.tgz > 1900.tgz
-$ mkdir ~/1900;
-tar -hxf 1900.tgz -C ~/1900
+$ curl -L https://nchc.dl.sourceforge.net/project/dsgpl/SRM%201.1%20Tool%20Chains/BROADCOM%20NORTHSTARPLUS%20Linux%203.6.5/gcc493_glibc220_hard-GPL.tgz > 1900.tgz
+$ mkdir ~/1900; tar -hxf 1900.tgz -C ~/1900
 ```
 
 ### Cross-compile `libpcap`
