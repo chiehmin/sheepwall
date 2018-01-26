@@ -69,9 +69,9 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	if (size_payload > 0) {
 		try {
 			Http http = httpParser.Parse(payload, size_payload);
-			cout << http.GetMethod() << endl
-				<< http.GetHost() << http.GetPath() << endl
-				<< http.GetPaylod() << endl;
+			if (http.IsCredz()) {
+				cout << http.ToString() << endl;
+			}
 		} catch (...) {}
 	}
 

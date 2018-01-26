@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 class Http {
 public:
@@ -14,7 +15,16 @@ public:
 	std::string GetPath() { return path_; }
 	std::string GetPaylod() { return payload_; }
 
+	std::string ToString();
+
+	bool IsCredz();
+
 private:
+	static const std::vector<std::string> acctFields;
+	static const std::vector<std::string> passwdFields;
+
+	bool IsPayloadContainFields(std::vector<std::string> fields);
+
 	std::string method_;
 	std::string path_;
 	std::string host_;
