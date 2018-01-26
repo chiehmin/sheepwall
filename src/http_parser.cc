@@ -53,7 +53,6 @@ Http HttpParser::Parse(const char *payload, int len)
 		boost::algorithm::to_lower(value);
 
 		headers[key] = value;
-		cout << key << ": " << value << endl;
 	}
 
 	// parse HTTP payload

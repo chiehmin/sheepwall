@@ -2,8 +2,6 @@
 
 #include <string>
 
-#include "http_parser.h"
-
 class Http {
 public:
 	friend class HttpParser;
