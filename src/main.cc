@@ -27,7 +27,8 @@ int main(int argc, char **argv)
 	desc.add_options()
 		("help,h", "Print help messages")
 		("interface,i", po::value<string>(), "Interface sniffered by sheepwall")
-		("write_to,w", po::value<string>(), "Log file");
+		("write_to,w", po::value<string>(), "Log file")
+		("daemon,D", "Daemonizing... run int the background");
 
 	po::variables_map vm;
 	po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -47,7 +48,7 @@ int main(int argc, char **argv)
 	}
 
 	if (vm.count("write_to")) {
-		devName = vm["write_to"].as<string>();
+		outputFile = vm["write_to"].as<string>();
 	}
 
 	cout << "Interface: " << devName << endl;
@@ -64,6 +65,11 @@ int main(int argc, char **argv)
 	}
 
 	cout << "Start sniffering..." << endl;
+
+	if (vm.count("daemon")) {
+		daemon(0, 0);
+	}
+
 	PcapSniffer sniffer(devName, move(logger));
 	sniffer.Start();
 
