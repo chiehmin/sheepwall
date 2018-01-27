@@ -4,6 +4,7 @@ extern "C" {
 #include <stdio.h>
 }
 
+#include <stdexcept>
 #include <fstream>
 #include <iostream>
 #include <string>
