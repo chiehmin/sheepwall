@@ -47,3 +47,10 @@ TEST(FileLoggerTest, basic)
 	remove(testFile.c_str());
 }
 
+TEST(FileLoggerTest, invalid)
+{
+	FileLogger logger("/tmp/jfisdo/rqwjiogf");
+
+	// act and assert
+	EXPECT_THROW(logger.Init(), runtime_error);
+}
