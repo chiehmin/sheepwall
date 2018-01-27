@@ -11,12 +11,11 @@ OBJECTS=$(addprefix build/, $(SOURCES:src/%.cc=%.o))
 
 all: build/sheepwall build/test/unit_test
 
-1900: CXX := /home/fatminmin/1900/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-g++
-1900: CXXFLAGS += -I/home/fatminmin/1900/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/ \
-	-I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
-1900: LDFLAGS += -L/home/fatminmin/1900/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/lib \
-	-L/home/fatminmin/arm-libpcap/lib
-1900: build/sheepwall
+# using ubuntu's g++-arm-linux-gnueabi package
+arm: CXX := arm-linux-gnueabi-g++
+arm: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
+arm: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib -static
+arm: build/sheepwall
 
 build/sheepwall: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)

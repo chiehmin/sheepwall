@@ -1,32 +1,26 @@
 # Sheepwall
 
-This is http traffic parser intended to record unprotected account, password and cookies.
+This is a http traffic parser intended to record unprotected account, password and cookies running on **router devices**.
 
 Features:
-- This can be run on Synology Router. (i.e [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac))
+- High performance
+	- It is designed to be run on **routers** so it is written in C/C++
+	- It has been tested to be work on [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac)
 
 ## Building
 
 This project uses `libpcap`, `boost` and `googletest`. After installing all above libraries, just simply execute `make` to build this project.
 
-### Build for rt1900ac
-
-The toolchain of Synology's routers and nases can be found at [source
-forge](https://sourceforge.net/projects/dsgpl/?source=navbar).
-
-Just simply download it and extract it.
-
-```
-$ curl -L https://nchc.dl.sourceforge.net/project/dsgpl/SRM%201.1%20Tool%20Chains/BROADCOM%20NORTHSTARPLUS%20Linux%203.6.5/gcc493_glibc220_hard-GPL.tgz > 1900.tgz
-$ mkdir ~/1900; tar -hxf 1900.tgz -C ~/1900
-```
+### Build for ARM-based devices
 
 ### Cross-compile `libpcap`
 
-We need the arm version of `libpcap` to build our sheepwall. We can just use the rt1900's toolchain to build `libpcap`.
+We need the arm version of `libpcap` to build our sheepwall. Here I used the `arm-linux-gnueabi-gcc` from Ubuntu's `g++-arm-linux-gnueabi` package.
+
+Download it!
 
 ```
-# folder to put the arm version(1900 version) of libpcap
+$ mkdir ~/arm-libpcap
 # download the libpcap source code
 $ curl -L https://github.com/the-tcpdump-group/libpcap/archive/libpcap-1.8.1.tar.gz > libpcap.tar.gz
 # extract it
@@ -35,13 +29,9 @@ $ tar -hxf libpcap.tar.gz
 
 compile it!!
 
-Here I explicitly set the `CC`, `CFLAGS` and `LDFLAGS` to the toolchain path of rt1900ac to compile the `libpcap`.
-
 ```
 $ mkdir ~/arm-libpcap
-$ CC=/home/fatminmin/1900/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcc \
-CFLAGS=-I/home/fatminmin/1900/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include/ \
-LDFLAGS=-L/home/fatminmin/1900/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/lib \
+$ CC=arm-linux-gnueabi-gcc \
 ./configure --host=arm-linux --prefix=/home/fatminmin/arm-libpcap --with-pcap=linux
 $ make -j4
 $ make install
@@ -60,19 +50,18 @@ $ tar -hxf boost.tar.gz
 
 ### Compile sheepwall
 
-In the `Makefile`, I re-defined the [Target-specific Variable
-Values](https://www.gnu.org/software/make/manual/html_node/Target_002dspecific.html) to compile sheepwall for rt1900ac.
+In the `Makefile`, I re-defined the [Target-specific Variable](https://www.gnu.org/software/make/manual/html_node/Target_002dspecific.html) to compile sheepwall for ARM deviced.
 
 ```makefile
-1900: CXX := /home/fatminmin/1900/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-g++
-1900: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
-1900: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib
-1900: build/sheepwall
+arm: CXX := arm-linux-gnueabi-g++
+arm: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
+arm: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib -static
+arm: build/sheepwall
 ```
 
 ### Run it
 
-Send it to the router via SSH and run it.
+Send it to your arm devices(Synology rt1900ac for example) and run it.
 
 ```
 $ scp build/sheepwall root@router.synology.com:/root
