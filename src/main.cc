@@ -7,20 +7,15 @@ extern "C" {
 #include <iostream>
 #include <string>
 
+#include <boost/program_options.hpp>
+
 #include "pcap_sniffer.h"
 #include "logger/logger_interface.h"
 #include "logger/stdout_logger.h"
 #include "logger/file_logger.h"
 
 using namespace std;
-
-void PrintHelp(string appName)
-{
-	/* cerr << "Usage:" << endl */
-	/* 	 << "  " << appName << " -i <interface> [-w <output file>]" << endl; */
-	cerr << "Usage:" << endl
-		 << "  " << appName << " <interface> [<output file>]" << endl;
-}
+namespace po = boost::program_options;
 
 int main(int argc, char **argv)
 {
@@ -28,47 +23,31 @@ int main(int argc, char **argv)
 	string devName;
 	string outputFile;
 
-	// XXX: 1900 toolchain has a bug for getopt...so we are not allowed to use it
-	/* static struct option long_options[] = { */
-	/* 	{"iface", required_argument, 0, 'i'}, */
-	/* 	{"write", required_argument, 0, 'w'}, */
-	/* 	{"help", no_argument, 0, 'h'}, */
-	/* 	{0, 0, 0, 0} */
-	/* }; */
-	/* while(-1 != (opt = getopt_long(argc, argv, "hiw", long_options, nullptr))) { */
-	/* 	switch(opt) { */
-	/* 	case 'i': */
-	/* 		devName = string(optarg); */
-	/* 		break; */
-	/* 	case 'w': */
-	/* 		outputFile = string(optarg); */
-	/* 		break; */
-	/* 	case 'h': */
-	/* 		PrintHelp(argv[0]); */
-	/* 		exit(0); */
-	/* 	case ':': */
-	/* 	case '?': */
-	/* 		PrintHelp(argv[0]); */
-	/* 		exit(-1); */
-	/* 	} */
-	/* } */
+	po::options_description desc("options");
+	desc.add_options()
+		("help,h", "Print help messages")
+		("interface,i", po::value<string>(), "Interface sniffered by sheepwall")
+		("write_to,w", po::value<string>(), "Log file");
 
-	if (2 > argc) {
-		PrintHelp(argv[0]);
-		exit(-1);
-	}
-	if (1 < argc) {
-		devName = string(argv[1]);
-	}
-	if (2 < argc) {
-		cout << argv[2] << endl;
-		outputFile = argv[2];
+	po::variables_map vm;
+	po::store(po::parse_command_line(argc, argv, desc), vm);
+	po::notify(vm);
+
+	if (vm.count("help")) {
+		cerr << desc << endl;
+		exit(0);
 	}
 
-	if (0 == devName.size()) {
-		cerr << "You must specify a interface for sniffering" << endl;
-		PrintHelp(argv[0]);
+	if (vm.count("interface")) {
+		devName = vm["interface"].as<string>();
+	} else {
+		cerr << "You must specify an interface to sniffer..." << endl;
+		cerr << desc << endl;
 		exit(-1);
+	}
+
+	if (vm.count("write_to")) {
+		devName = vm["write_to"].as<string>();
 	}
 
 	cout << "Interface: " << devName << endl;

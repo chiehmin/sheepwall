@@ -39,13 +39,21 @@ $ make install
 
 Finally, the compiled `libpcap` will be put under `/home/fatminmin/arm-libpcap`
 
-### Download the boost
-
-I just use some boost features which are header-only, so just dowload it and there's no need to compile it.
+### Cross-compile boost
 
 ```
 $ curl -L https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz > boost.tar.gz
-$ tar -hxf boost.tar.gz
+$ tar -hxf boost.tar.gz && cd boost_1_66_0
+# we only use program_options library here
+$ ./bootstrap.sh --with-libraries=program_options
+```
+
+Modify `using gcc ;` to  `using gcc : arm : arm-linux-gnueabi-g++ ;` in `project-config.jam`
+
+```
+# compile it
+$ mkdir ~/arm-boost
+$ ./bjam install toolset=gcc-arm runtime-link=static --prefix=/home/fatminmin/arm-boost
 ```
 
 ### Compile sheepwall
@@ -55,7 +63,7 @@ In the `Makefile`, I re-defined the [Target-specific Variable](https://www.gnu.o
 ```makefile
 arm: CXX := arm-linux-gnueabi-g++
 arm: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
-arm: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib -static
+arm: LDFLAGS += -L/home/fatminmin/arm-boost/lib -L/home/fatminmin/arm-libpcap/lib -static
 arm: build/sheepwall
 ```
 

@@ -2,7 +2,7 @@ CXX := g++
 # TODO: remove -fpermissive
 CXXFLAGS := --std=c++14 -fpermissive -I./include
 LDFLAGS :=
-LDLIBS := -lpcap
+LDLIBS := -lpcap -lboost_program_options
 
 SOURCES=$(shell find src -name "*.cc")
 OBJECTS=$(addprefix build/, $(SOURCES:src/%.cc=%.o))
@@ -13,8 +13,8 @@ all: build/sheepwall build/test/unit_test
 
 # using ubuntu's g++-arm-linux-gnueabi package
 arm: CXX := arm-linux-gnueabi-g++
-arm: CXXFLAGS += -I/home/fatminmin/boost_1_66_0 -I/home/fatminmin/arm-libpcap/include
-arm: LDFLAGS += -L/home/fatminmin/arm-libpcap/lib -static
+arm: CXXFLAGS += -I/home/fatminmin/arm-boost/include -I/home/fatminmin/arm-libpcap/include
+arm: LDFLAGS += -L/home/fatminmin/arm-boost/lib -L/home/fatminmin/arm-libpcap/lib -static
 arm: build/sheepwall
 
 build/sheepwall: $(OBJECTS)
