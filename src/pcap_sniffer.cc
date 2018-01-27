@@ -4,8 +4,12 @@
 
 using namespace std;
 
-PcapSniffer::PcapSniffer(string devName) :
-	devName_(devName)
+PcapSniffer::PcapSniffer(
+		string devName,
+		unique_ptr<LoggerInterface> logger /* = make_unique<StdoutLogger>() */
+	) :
+	devName_(devName),
+	logger_(move(logger))
 {}
 
 PcapSniffer::~PcapSniffer()
@@ -65,7 +69,7 @@ void PcapSniffer::HandlePacket(u_char *args, const struct pcap_pkthdr *header, c
 		try {
 			Http http = sniffer->httpParser_.Parse(payload, size_payload);
 			if (http.IsCredz()) {
-				cout << http.ToString() << endl;
+				sniffer->logger_->Log(http);
 			}
 		} catch (...) {}
 	}

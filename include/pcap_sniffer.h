@@ -13,14 +13,20 @@ extern "C" {
 #include <arpa/inet.h>
 }
 
+#include <memory>
 #include <string>
 
 #include "sniff.h"
 #include "http_parser.h"
+#include "logger/logger_interface.h"
+#include "logger/stdout_logger.h"
 
 class PcapSniffer {
 public:
-	PcapSniffer(std::string devName);
+	PcapSniffer(
+			std::string devName,
+			std::unique_ptr<LoggerInterface> logger = std::make_unique<StdoutLogger>()
+		);
 	~PcapSniffer();
 
 	static void HandlePacket(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
@@ -35,5 +41,6 @@ private:
 	struct bpf_program fp_;	/* compiled filter program (expression) */
 
 	HttpParser httpParser_;
+	std::unique_ptr<LoggerInterface> logger_;
 };
 

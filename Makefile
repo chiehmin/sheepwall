@@ -20,6 +20,7 @@ build/sheepwall: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 build/%.o: src/%.cc
+	if [ ! -d `dirname $@` ]; then mkdir -p `dirname $@`; fi
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 # test
