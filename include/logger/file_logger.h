@@ -10,6 +10,7 @@ public:
 	FileLogger(std::string filePath);
 	virtual ~FileLogger() = default;
 
+	void Init();
 	virtual void Log(const Http &http);
 
 private:

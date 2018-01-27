@@ -10,14 +10,14 @@ public:
 	Http() = default;
 	virtual ~Http() = default;
 
-	std::string GetMethod() { return method_; }
-	std::string GetHost() { return host_; }
-	std::string GetPath() { return path_; }
-	std::string GetPaylod() { return payload_; }
+	virtual std::string GetMethod() { return method_; }
+	virtual std::string GetHost() { return host_; }
+	virtual std::string GetPath() { return path_; }
+	virtual std::string GetPaylod() { return payload_; }
 
-	std::string ToString();
+	virtual std::string ToString();
 
-	bool IsCredz();
+	virtual bool IsCredz();
 
 private:
 	static const std::vector<std::string> acctFields;
