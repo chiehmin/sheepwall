@@ -47,7 +47,7 @@ bool Http::IsCredz()
 
 bool Http::IsContainFields(string content, vector<string> fields)
 {
-	boost::algorithm::to_lower_copy(content);
+	boost::algorithm::to_lower(content);
 	for (auto &field : fields) {
 		if (string::npos != content.find(field)) {
 			return true;

@@ -1,9 +1,11 @@
 #include "http_parser.h"
 
-#include <cstring>
+extern "C" {
+#include <string.h>
+}
 
-#include <iostream>
 #include <map>
+#include <memory>
 #include <sstream>
 #include <utility>
 
@@ -19,10 +21,14 @@ Http HttpParser::Parse(const char *payload, int len)
 		throw runtime_error("not http packet");
 	}
 
+	unique_ptr<char[]> buffer = make_unique<char[]>(len + 1);
+	strncpy(buffer.get(), payload, len);
+	buffer[len] = '\0';
+
 	Http resHttp;
 
 	// parse http header
-	istringstream payload_ss{payload};
+	istringstream payload_ss{buffer.get()};
 	map<string, string> headers;
 	string line;
 
