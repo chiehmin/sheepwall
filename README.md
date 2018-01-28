@@ -7,6 +7,12 @@ Features:
 	- It is designed to be run on **routers** so it is written in C/C++
 	- It has been tested to be work on [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac)
 
+## Demo
+
+Just run the sheepwall and wait for the sheep to come in :).
+
+[![asciicast](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB.png)](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB)
+
 ## Usage
 
 Quick installation
@@ -24,10 +30,6 @@ options:
   -w [ --write_to ] arg  Log file
   -D [ --daemon ]        Daemonizing... run in the background
 ```
-
-## Demo
-
-[![asciicast](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB.png)](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB)
 
 ## Building
 
@@ -98,6 +100,10 @@ $ scp build/sheepwall root@router.synology.com:/root
 # in the router console
 SynologyRouter> ./sheepwall -i eth0 -w cred.log -D
 ```
+
+## Disclaimer
+
+Usage of sheepwall for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 ## Author
 
