@@ -25,6 +25,10 @@ options:
   -D [ --daemon ]        Daemonizing... run in the background
 ```
 
+## Demo
+
+[![asciicast](https://asciinema.org/a/bq89tVDoUrs3b707B3L8GmkDS.png?autoplay=1)](https://asciinema.org/a/bq89tVDoUrs3b707B3L8GmkDS)
+
 ## Building
 
 This project uses `libpcap`, `boost` and `googletest`. After installing all above libraries, just simply execute `make` to build this project.
