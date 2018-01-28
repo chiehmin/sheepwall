@@ -35,7 +35,7 @@ Http HttpParser::Parse(const char *payload, int len)
 		resHttp.method_ = boost::algorithm::to_lower_copy(actions[0]);
 	}
 	if (1 < actions.size()) {
-		resHttp.path_ = boost::algorithm::to_lower_copy(actions[1]);
+		resHttp.path_ = actions[1];
 	}
 
 	// parse HTTP headers
@@ -49,11 +49,14 @@ Http HttpParser::Parse(const char *payload, int len)
 		string value = line.substr(idx + 1);
 		boost::algorithm::trim(key);
 		boost::algorithm::trim(value);
+
+		// change header to lower key for easier locating
 		boost::algorithm::to_lower(key);
-		boost::algorithm::to_lower(value);
 
 		headers[key] = value;
 	}
+	resHttp.host_ = headers["host"];
+	resHttp.cookie_ = headers["cookie"];
 
 	// parse HTTP payload
 	string httpPayload = "";
@@ -61,7 +64,6 @@ Http HttpParser::Parse(const char *payload, int len)
 		httpPayload += line;
 	}
 
-	resHttp.host_ = headers["host"];
 	resHttp.payload_ = httpPayload;
 
 	return resHttp;

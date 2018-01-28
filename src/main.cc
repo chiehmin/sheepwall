@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		("help,h", "Print help messages")
 		("interface,i", po::value<string>(), "Interface sniffered by sheepwall")
 		("write_to,w", po::value<string>(), "Log file")
-		("daemon,D", "Daemonizing... run int the background");
+		("daemon,D", "Daemonizing... run in the background");
 
 	po::variables_map vm;
 	po::store(po::parse_command_line(argc, argv, desc), vm);

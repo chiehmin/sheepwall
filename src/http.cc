@@ -21,11 +21,18 @@ const vector<string> Http::passwdFields {
 	"passwort", "passwrd", "wppassword", "upasswd", "j_password", "login-pwd"
 };
 
+const vector<string> Http::sessionFields {
+	"sess",
+	/* "sessionid", "sessid", "sess_id", "session_key", */
+	/* "PHPSESSID", "ASP.NET_SessionId", "_rb_sess_id", "JSESSIONID " */
+};
+
 string Http::ToString()
 {
 	ostringstream oss;
 	oss << "Method: " << method_ << endl
 		<< "Url: " << host_ << path_ << endl
+		<< "Cookie: " << cookie_ << endl
 		<< "Payload: " << payload_ << endl;
 
 	return oss.str();
@@ -33,15 +40,16 @@ string Http::ToString()
 
 bool Http::IsCredz()
 {
-	return IsPayloadContainFields(acctFields) ||
-		IsPayloadContainFields(passwdFields);
+	return IsContainFields(payload_, acctFields) ||
+		IsContainFields(payload_, passwdFields) ||
+		IsContainFields(cookie_, sessionFields);
 }
 
-bool Http::IsPayloadContainFields(vector<string> fields)
+bool Http::IsContainFields(string content, vector<string> fields)
 {
-	string lowerPayload = boost::algorithm::to_lower_copy(payload_);
+	boost::algorithm::to_lower_copy(content);
 	for (auto &field : fields) {
-		if (string::npos != lowerPayload.find(field)) {
+		if (string::npos != content.find(field)) {
 			return true;
 		}
 	}

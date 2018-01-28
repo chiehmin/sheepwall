@@ -7,6 +7,17 @@ Features:
 	- It is designed to be run on **routers** so it is written in C/C++
 	- It has been tested to be work on [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac)
 
+## Usage
+
+```
+$ sheepwall -i <interface> [-w <log file>] [-D]
+options:
+  -h [ --help ]          Print help messages
+  -i [ --interface ] arg Interface sniffered by sheepwall
+  -w [ --write_to ] arg  Log file
+  -D [ --daemon ]        Daemonizing... run in the background
+```
+
 ## Building
 
 This project uses `libpcap`, `boost` and `googletest`. After installing all above libraries, just simply execute `make` to build this project.
@@ -74,7 +85,7 @@ Send it to your arm devices(Synology rt1900ac for example) and run it.
 ```
 $ scp build/sheepwall root@router.synology.com:/root
 # in the router console
-SynologyRouter> /root/sheepwall
+SynologyRouter> ./sheepwall -i eth0 -w cred.log -D
 ```
 
 ## Author
