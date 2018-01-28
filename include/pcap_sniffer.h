@@ -27,7 +27,7 @@ public:
 			std::string devName,
 			std::unique_ptr<LoggerInterface> logger = std::make_unique<StdoutLogger>()
 		);
-	~PcapSniffer();
+	virtual ~PcapSniffer();
 
 	static void HandlePacket(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
 	void Start();
