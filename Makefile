@@ -1,8 +1,8 @@
-CXX := g++
+CXX ?= g++
 # TODO: remove -fpermissive
 CXXFLAGS := --std=c++14 -fpermissive -I./include
 LDFLAGS :=
-LDLIBS := -lpcap -lboost_program_options
+LDLIBS := -pthread -lpcap -lboost_program_options
 
 SOURCES := $(shell find src -name "*.cc")
 
@@ -25,9 +25,9 @@ build/x86/%.o: src/%.cc
 # test
 TEST_SOURCES=$(shell find test -name "*.cc")
 TEST_OBJECTS=$(addprefix build/test/, $(TEST_SOURCES:test/%.cc=%.o)) $(filter-out build/x86/main.o, $(X86_OBJECTS))
-TEST_CXXFLAGS := $(CXXFLAGS) $(shell pkg-config --libs gtest_main)
+TEST_CXXFLAGS := $(CXXFLAGS)
 TEST_LDFLAGS := $(LDFLAGS)
-TEST_LDLIBS := $(LDLIBS) $(shell pkg-config --libs gtest_main)
+TEST_LDLIBS := $(LDLIBS) -lgtest -lgtest_main
 
 build/test/unit_test: $(TEST_OBJECTS)
 	$(CXX) $(TEST_CXXFLAGS) $(LDFLAGS) -o $@ $^ $(TEST_LDLIBS)

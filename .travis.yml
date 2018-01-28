@@ -1,0 +1,26 @@
+sudo: enabled
+language: cpp
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-5
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libpcap-dev libboost-all-dev
+  # build for googletest
+  - wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
+  - tar -xf release-1.8.0.tar.gz
+  - cd googletest-release-1.8.0
+  - cmake .
+  - make -j4
+  - sudo make install
+  - cd "${TRAVIS_BUILD_DIR}"
+
+script:
+  - CXX=g++-5 make x86 -j4
+  - build/test/unit_test
+

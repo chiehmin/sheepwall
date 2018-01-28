@@ -1,5 +1,7 @@
 # Sheepwall
 
+[![Build Status](https://travis-ci.org/chiehmin/sheepwall.svg?branch=master)](https://travis-ci.org/chiehmin/sheepwall)
+
 This is a http traffic parser intended to record unprotected account, password and cookies running on **router devices**.
 
 Features:

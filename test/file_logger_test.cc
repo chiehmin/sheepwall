@@ -27,7 +27,7 @@ public:
 TEST(FileLoggerTest, basic)
 {
 	// arrange
-	const string testFile = "/tmp/sheepwall_test.log";
+	const string testFile = "sheepwall_test.log";
 	FileLogger logger(testFile);
 	HttpMock httpMock;
 
@@ -50,7 +50,7 @@ TEST(FileLoggerTest, basic)
 
 TEST(FileLoggerTest, invalid)
 {
-	FileLogger logger("/tmp/jfisdo/rqwjiogf");
+	FileLogger logger("/fjiaso/jfisdo/rqwjiogf");
 
 	// act and assert
 	EXPECT_THROW(logger.Init(), runtime_error);
