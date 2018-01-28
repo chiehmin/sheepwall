@@ -9,6 +9,13 @@ Features:
 
 ## Usage
 
+Quick installation
+
+```
+# Download sheepwall binary and put it into you router
+SynologyRouter> curl -L https://github.com/chiehmin/sheepwall/releases/download/v0.1/sheepwall_arm > sheepwall
+```
+
 ```
 $ sheepwall -i <interface> [-w <log file>] [-D]
 options:
