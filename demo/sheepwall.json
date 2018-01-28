@@ -1,522 +1,726 @@
 {
-  "duration": 43.617614,
-  "version": 1,
   "title": null,
-  "command": null,
-  "width": 190,
-  "height": 49,
   "stdout": [
     [
-      0.084709,
-      "\u001b[01;32mfatminmin@FATMINMIN-WIN10\u001b[00m:\u001b[01;34m~\u001b[00m$ "
+      0.090667,
+      "\u001b]0;fatminmin@FATMINMIN-WIN10: ~\u0007\u001b[01;32mfatminmin@FATMINMIN-WIN10\u001b[00m:\u001b[01;34m~\u001b[00m$ "
     ],
     [
-      0.752281,
+      0.689738,
       "s"
     ],
     [
-      0.183219,
+      0.160139,
       "s"
     ],
     [
-      0.128314,
+      0.095834,
       "h"
     ],
     [
-      0.367345,
+      0.375979,
       " "
     ],
     [
-      0.304075,
+      0.456014,
       "r"
     ],
     [
-      0.119936,
+      0.11195,
       "o"
     ],
     [
-      0.168159,
+      0.152332,
       "o"
     ],
     [
-      0.081294,
+      0.071823,
       "t"
     ],
     [
-      0.278595,
+      0.256327,
       "@"
     ],
     [
-      0.367778,
+      0.311548,
+      "y"
+    ],
+    [
+      0.368117,
+      "\b\u001b[K"
+    ],
+    [
+      0.256103,
       "r"
     ],
     [
-      0.096058,
+      0.089287,
       "o"
     ],
     [
-      0.096332,
+      0.078487,
       "u"
     ],
     [
-      0.047636,
+      0.048339,
       "t"
     ],
     [
-      0.104112,
+      0.088115,
       "e"
     ],
     [
-      0.119976,
+      0.111574,
       "r"
     ],
     [
-      0.127696,
+      0.192008,
       "."
     ],
     [
-      0.184474,
+      0.120095,
       "s"
     ],
     [
-      0.079474,
+      0.137974,
       "y"
     ],
     [
-      0.192583,
+      0.182519,
       "n"
     ],
     [
-      0.119849,
+      0.087513,
       "o"
     ],
     [
-      0.215942,
+      0.175972,
       "l"
     ],
     [
-      0.192095,
+      0.167954,
       "o"
     ],
     [
-      0.143699,
+      0.088646,
       "g"
     ],
     [
-      0.096128,
+      0.119543,
       "y"
     ],
     [
-      0.184212,
+      0.192065,
       "."
     ],
     [
-      0.152122,
+      0.087807,
       "c"
     ],
     [
-      0.071862,
+      0.136046,
       "o"
     ],
     [
-      0.064057,
+      0.063989,
       "m"
     ],
     [
-      0.279908,
+      0.504418,
       "\r\n"
     ],
     [
-      0.247195,
+      0.244716,
       "root@router.synology.com's password: "
     ],
     [
-      1.824729,
+      1.466729,
       "\r\n"
     ],
     [
-      0.212046,
-      "\r\n"
+      0.212213,
+      "\r\n\r\nBusyBox v1.16.1 (2017-12-18 15:01:57 CST) built-in shell (ash)\r\nEnter 'help' for a list of built-in commands.\r\n\r\n"
     ],
     [
-      0.000205,
-      "\r\nBusyBox v1.16.1 (2017-12-18 15:01:57 CST) built-in shell (ash)\r\nEnter 'help' for a list of built-in commands.\r\n\r\n"
-    ],
-    [
-      0.010254,
+      0.007942,
       "SynologyRouter> "
     ],
     [
-      0.750673,
-      "curl -L https://github.com/chiehmin/sheepwall/releases/download/v0.1.1/sheepwall_arm > sheepwall"
+      0.84876,
+      "curl -L https://github.com/chiehmin/sheepwall/releases/download/v0.1.1/sheepwall_arm > s\r\r\nheepwall"
     ],
     [
-      1.022888,
+      1.28627,
       "\r\n"
     ],
     [
-      0.02022,
-      "  % "
+      0.023566,
+      "  % Total    % "
     ],
     [
-      8.1e-05,
-      "Total    % Received %"
+      0.000359,
+      "Receiv"
     ],
     [
-      0.000483,
-      " Xferd  Avera"
+      0.000122,
+      "ed"
     ],
     [
-      0.000176,
-      "ge Speed   Ti"
-    ],
-    [
-      0.00013,
-      "me    Time "
-    ],
-    [
-      0.000187,
-      "    Time  Curren"
-    ],
-    [
-      0.000129,
-      "t\r\n"
-    ],
-    [
-      0.000786,
-      "                                 "
-    ],
-    [
-      0.000813,
-      "Dload  Upload   Total   Spent    Left  Speed\r\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
-    ],
-    [
-      0.958298,
-      "\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   604    0   604    0     0    629      0 --:--:-- --:--:-- --:--:--   629\r\n"
-    ],
-    [
-      1.005148,
-      "\r"
-    ],
-    [
-      5.1e-05,
-      "  0 330"
-    ],
-    [
-      0.000226,
-      "4k    0    "
-    ],
-    [
-      0.000137,
-      " 0"
-    ],
-    [
-      0.000362,
-      "   "
-    ],
-    [
-      0.000312,
-      " 0     0      0      0 --:--:--  "
-    ],
-    [
-      0.00065,
-      "0:00:01 --:--:--     0"
-    ],
-    [
-      0.834897,
-      "\r  2 3304k    2 69200    0     0  24696      0  0:02:17  0:00:02  0:02:15 82775"
-    ],
-    [
-      1.039973,
-      "\r 15 "
-    ],
-    [
-      5.3e-05,
-      "3304k   15  "
-    ],
-    [
-      0.000318,
-      "508k    0  "
-    ],
-    [
-      0.002547,
-      "   0   132k      0  0:00:24  0:00:03  0:0"
-    ],
-    [
-      0.000106,
-      "0:21  270k"
-    ],
-    [
-      0.93487,
-      "\r"
-    ],
-    [
-      4.6e-05,
-      " 6"
-    ],
-    [
-      0.000237,
-      "9 "
+      0.000119,
+      " %"
     ],
     [
       0.00019,
-      "33"
+      " X"
     ],
     [
-      0.000155,
-      "04"
+      0.000146,
+      "fe"
     ],
     [
-      0.00016,
-      "k"
+      0.000208,
+      "r"
     ],
     [
-      0.000203,
+      0.00015,
+      "d "
+    ],
+    [
+      0.000146,
+      " A"
+    ],
+    [
+      0.000131,
+      "v"
+    ],
+    [
+      0.000174,
+      "er"
+    ],
+    [
+      0.000198,
+      "ag"
+    ],
+    [
+      0.00045,
+      "e Spe"
+    ],
+    [
+      0.000173,
+      "e"
+    ],
+    [
+      0.000166,
+      "d "
+    ],
+    [
+      0.000165,
       "  "
     ],
     [
-      0.000194,
+      0.000211,
+      "Ti"
+    ],
+    [
+      0.000184,
+      "me"
+    ],
+    [
+      0.000153,
       " "
     ],
     [
-      0.000846,
-      "69 2294k    0     0   479k      0  0:00:06  0:00:04  0:00:02  815k"
+      0.000159,
+      "  "
     ],
     [
-      0.528907,
+      0.000178,
+      " T"
+    ],
+    [
+      0.000146,
+      "im"
+    ],
+    [
+      0.00025,
+      "e "
+    ],
+    [
+      0.000163,
+      "  "
+    ],
+    [
+      0.000191,
+      "  "
+    ],
+    [
+      0.000135,
+      "Ti"
+    ],
+    [
+      0.000166,
+      "me"
+    ],
+    [
+      0.000185,
+      "  "
+    ],
+    [
+      0.00017,
+      "C"
+    ],
+    [
+      0.000146,
+      "ur"
+    ],
+    [
+      0.000189,
+      "re"
+    ],
+    [
+      0.000148,
+      "nt"
+    ],
+    [
+      0.000194,
+      "\r\n "
+    ],
+    [
+      0.000148,
+      "  "
+    ],
+    [
+      0.000166,
+      " "
+    ],
+    [
+      0.000149,
+      "  "
+    ],
+    [
+      0.000192,
+      "  "
+    ],
+    [
+      0.000117,
+      "  "
+    ],
+    [
+      0.000179,
+      " "
+    ],
+    [
+      0.000185,
+      "   "
+    ],
+    [
+      0.000183,
+      " "
+    ],
+    [
+      0.000158,
+      "  "
+    ],
+    [
+      0.00019,
+      "  "
+    ],
+    [
+      0.000111,
+      "  "
+    ],
+    [
+      0.000186,
+      "  "
+    ],
+    [
+      0.000496,
+      "     "
+    ],
+    [
+      0.000143,
+      "  "
+    ],
+    [
+      0.000138,
+      "  "
+    ],
+    [
+      0.000757,
+      " "
+    ],
+    [
+      6.3e-05,
+      "Dload  U"
+    ],
+    [
+      0.000182,
+      "p"
+    ],
+    [
+      0.000154,
+      "lo"
+    ],
+    [
+      0.000151,
+      "ad"
+    ],
+    [
+      0.000186,
+      "  "
+    ],
+    [
+      0.000153,
+      " T"
+    ],
+    [
+      0.000166,
+      "o"
+    ],
+    [
+      0.000171,
+      "ta"
+    ],
+    [
+      0.000155,
+      "l"
+    ],
+    [
+      0.000263,
+      "  "
+    ],
+    [
+      0.001484,
+      " Spent    Left  Speed\r\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+    ],
+    [
+      0.253696,
+      "\r  0"
+    ],
+    [
+      0.000343,
+      "     0    0    "
+    ],
+    [
+      0.000104,
+      " 0   "
+    ],
+    [
+      0.000179,
+      " 0   "
+    ],
+    [
+      0.000121,
+      "  0     "
+    ],
+    [
+      0.00022,
+      " 0      0 --:-"
+    ],
+    [
+      0.000222,
+      "-:-- --:--:--"
+    ],
+    [
+      0.000198,
+      " --:--:-- "
+    ],
+    [
+      0.000197,
+      "    0"
+    ],
+    [
+      0.670357,
       "\r100"
     ],
     [
-      0.000301,
-      " 3304k  100 3304k    0     "
+      0.000363,
+      "   604    0   "
     ],
     [
-      0.000351,
-      "0   622"
+      0.000175,
+      "604    0     0    642      0 --:"
     ],
     [
-      0.019944,
-      "k  "
+      0.000155,
+      "--:-- --:-"
     ],
     [
-      6.7e-05,
-      "    0  0:00:05  0:00:05 --:--:--  987k\r\n"
+      0.000157,
+      "-:-- --"
     ],
     [
-      0.00063,
+      0.000215,
+      ":--:--   642\r\n"
+    ],
+    [
+      0.49537,
+      "\r  0"
+    ],
+    [
+      0.000184,
+      "     0    0    "
+    ],
+    [
+      9.7e-05,
+      " 0    0"
+    ],
+    [
+      0.000188,
+      "     "
+    ],
+    [
+      0.00211,
+      "0      0      0 --:--:--  0:00:01 --:--:--"
+    ],
+    [
+      0.000155,
+      "     0"
+    ],
+    [
+      0.860972,
+      "\r  0 "
+    ],
+    [
+      0.000103,
+      "3304k    "
+    ],
+    [
+      8.2e-05,
+      "0 33323    0     "
+    ],
+    [
+      0.000812,
+      "0 "
+    ],
+    [
+      0.000146,
+      " 14488   "
+    ],
+    [
+      0.000184,
+      "   0 "
+    ],
+    [
+      0.000525,
+      " 0:03:53  0:00:02  0:03:51 38568"
+    ],
+    [
+      1.021079,
+      "\r  7"
+    ],
+    [
+      0.000605,
+      " 3304k    7  2"
+    ],
+    [
+      0.000189,
+      "54k    0     0  78447      0  0:00:43  0:00:03  0:00:40  134k"
+    ],
+    [
+      1.019705,
+      "\r 41 3304k   41 1376k    0     0   316k      0  0:00:10  0:00:04  0:00:06  473k"
+    ],
+    [
+      0.822361,
+      "\r100"
+    ],
+    [
+      0.001104,
+      " 3304k  100 3304k   "
+    ],
+    [
+      0.003388,
+      " 0     0   639k      0  0:00:05  0:00:05 --:--:-"
+    ],
+    [
+      0.000139,
+      "-  886k\r\n"
+    ],
+    [
+      0.020381,
       "SynologyRouter> "
     ],
     [
-      0.843429,
+      0.681596,
       "c"
     ],
     [
-      0.088081,
+      0.112319,
       "h"
     ],
     [
-      0.208117,
-      "nm"
-    ],
-    [
-      0.087365,
-      "o"
-    ],
-    [
-      0.888656,
-      "\b \b"
-    ],
-    [
-      0.167647,
-      "\b \b"
-    ],
-    [
-      0.160099,
-      "\b \b"
-    ],
-    [
-      0.272291,
+      0.214975,
       "m"
     ],
     [
-      0.079537,
+      0.015901,
+      "n"
+    ],
+    [
+      0.64788,
+      "\b \b"
+    ],
+    [
+      0.360212,
       "o"
     ],
     [
-      0.127904,
+      0.128291,
       "d"
     ],
     [
-      0.344406,
+      0.143496,
       " "
     ],
     [
-      0.167833,
+      0.120115,
       "a"
     ],
     [
-      0.35412,
+      0.370544,
       "+"
     ],
     [
-      0.19824,
+      0.173418,
       "x"
     ],
     [
-      0.159906,
+      0.119818,
       " "
     ],
     [
-      0.199574,
+      0.152425,
       "s"
     ],
     [
-      0.144421,
+      0.119618,
       "h"
     ],
     [
-      0.087831,
+      0.096562,
       "e"
     ],
     [
-      0.120176,
+      0.111886,
       "\rSynologyRouter> chmod a+x sheepwall \u001b[J"
     ],
     [
-      0.576046,
+      0.552523,
       "\r\n"
     ],
     [
-      0.002944,
+      0.002666,
       "SynologyRouter> "
     ],
     [
-      0.661027,
+      0.66838,
       "."
     ],
     [
-      0.080145,
+      0.080245,
       "/"
     ],
     [
-      0.152082,
+      0.152209,
       "s"
     ],
     [
-      0.168014,
+      0.153978,
       "h"
     ],
     [
-      0.127907,
+      0.149578,
       "e"
     ],
     [
-      0.079912,
+      0.112236,
       "\rSynologyRouter> ./sheepwall \u001b[J"
     ],
     [
-      0.696284,
+      0.56003,
       "-"
     ],
     [
-      0.671299,
+      0.207782,
       "i"
     ],
     [
-      0.135989,
+      0.136175,
       " "
     ],
     [
-      0.232244,
+      0.151853,
       "e"
     ],
     [
-      0.1442,
-      "h"
-    ],
-    [
-      0.095999,
+      0.266262,
       "t"
     ],
     [
-      0.535949,
-      "\b \b"
-    ],
-    [
-      0.162196,
-      "\b \b"
-    ],
-    [
-      0.141735,
-      "t"
-    ],
-    [
-      0.087694,
+      0.085722,
       "h"
     ],
     [
-      0.208188,
+      0.26424,
       "0"
     ],
     [
-      0.272509,
+      0.560728,
       "\r\n"
     ],
     [
-      0.002422,
-      "Interface: eth0\r\n"
+      0.00526,
+      "Interface: eth0\r\nOutput: stdout\r\nStart sniffering...\r\n"
     ],
     [
-      0.001141,
-      "Output: stdout\r\nStart sniffering...\r\n"
+      2.768491,
+      "Sun Jan 28 15:07:34 2018\r\n"
     ],
     [
-      3.085909,
-      "Sun Jan 28 14:57:50 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
+      0.000687,
+      "Method: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
     ],
     [
-      0.999802,
-      "Sun Jan 28 14:57:51 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.UShopShareUtil.Ajax.GlobalAjaxAccountUtil,ULibrary.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"fatminmin@fatminmin.com\",\"aPwd\":\"af13ccf7106892ec39ba4f9f29deb1044748ed29d312409533e525385d098a67\"}\r\n\r\n"
+      1.887809,
+      "Sun Jan 28 15:07:36 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.UShopShareUtil.Ajax.GlobalAjaxAccountUtil,ULibrary.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"fatminmin\",\"aPwd\":\"8d22b9b0781badaac13b903f6eba40ae7de94198f0509b1da8070a2c56bf3edd\"}\r\n\r\n"
     ],
     [
-      2.000783,
-      "Sun Jan 28 14:57:53 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
+      1.148093,
+      "Sun Jan 28 15:07:37 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
     ],
     [
-      3.002145,
-      "Sun Jan 28 14:57:56 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
+      3.251562,
+      "Sun Jan 28 15:07:40 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
     ],
     [
-      2.998927,
-      "Sun Jan 28 14:57:59 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\nSun Jan 28 14:57:59 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.UShopShareUtil.Ajax.GlobalAjaxAccountUtil,ULibrary.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"fasfas\",\"aPwd\":\"7d9e0f767ca91c8c7845fa028b4f66ded5a08515756251b7f07974d26c78d620\"}\r\n\r\n"
+      1.561727,
+      "Sun Jan 28 15:07:42 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.UShopShareUtil.Ajax.GlobalAjaxAccountUtil,ULibrary.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"fasfdas\",\"aPwd\":\"260e76a0075ddbb1a95725ea8b4146aa9554efb46961818a44d42b8484f8a625\"}\r\n\r\n"
     ],
     [
-      2.860104,
-      "Sun Jan 28 14:58:02 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
-    ],
-    [
-      2.577397,
-      "Sun Jan 28 14:58:05 2018\r\nMethod: post\r\nUrl: www.mayumilkinjp.com.tw/ajaxpro/Mallbic.U.Shop.Ajax.AccountUtil,uShopPC.ashx\r\nCookie: ASP.NET_SessionId=s2o1k8qan0td0dd43e22jhw1ertl41yem; _ga=GA1.3.1305413705.1517121986; _gid=GA1.3.2010929211.1517121986; BUYER_SHOP_CART=3130190s2o1k8qan0td0dd43e22jhw1ertl41yem636527475857337881; AJAX-VERSION=30329; _gat=1; _gat_UA_4475133_58=1\r\nPayload: {\"aAccount\":\"abc@gmail.com\"}\r\n\r\n"
-    ],
-    [
-      0.638594,
+      1.605003,
       "^C"
     ],
     [
-      0.14104,
+      0.071505,
       "\r\nSynologyRouter> "
     ],
     [
-      0.54927,
+      0.564506,
       "Connection to router.synology.com closed.\r\r\n"
     ],
     [
-      0.002094,
-      "\u001b[01;32mfatminmin@FATMINMIN-WIN10\u001b[00m:\u001b[01;34m~\u001b[00m$ "
+      0.002896,
+      "\u001b]0;fatminmin@FATMINMIN-WIN10: ~\u0007\u001b[01;32mfatminmin@FATMINMIN-WIN10\u001b[00m:\u001b[01;34m~\u001b[00m$ "
     ]
   ],
+  "duration": 35.889875,
+  "height": 27,
+  "version": 1,
+  "width": 104,
+  "command": null,
   "env": {
     "SHELL": "/bin/bash",
-    "TERM": "screen-256color"
+    "TERM": "xterm-256color"
   }
 }

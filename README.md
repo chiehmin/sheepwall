@@ -27,7 +27,7 @@ options:
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/bq89tVDoUrs3b707B3L8GmkDS.png?autoplay=1)](https://asciinema.org/a/bq89tVDoUrs3b707B3L8GmkDS)
+[![asciicast](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB.png)](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB)
 
 ## Building
 
