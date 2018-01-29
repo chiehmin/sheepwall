@@ -7,7 +7,9 @@ This is a http traffic parser intended to record unprotected account, password a
 Features:
 - High performance
 	- It is designed to be run on **routers** so it is written in C/C++
-	- It has been tested to be work on [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac)
+- It has been tested to be worked on [rt1900ac](https://www.synology.com/en-global/products/RT1900ac) and [rt2600ac](https://www.synology.com/en-global/products/RT2600ac)
+- ASUS routers (ex: RT-AC68U which I have tested) with [DD-WRT](https://www.dd-wrt.com/) also work well!
+	- Most original Asus router firmwares are shipped with Linux kernel 2.6.36.4 which is too old and I don't want to support it. If you are interested, you can use ASUS's [toolchain](https://github.com/kvic-z/brcm-arm-toolchains) to build this project (modifications are needed cause g++ 4.5.3 does not support C++14).
 
 ## Demo
 
