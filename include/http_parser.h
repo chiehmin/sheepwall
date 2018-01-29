@@ -5,7 +5,7 @@
 class HttpParser {
 public:
 	HttpParser() = default;
-	~HttpParser() = default;
+	virtual ~HttpParser() = default;
 
 	Http Parse(const char* payload, int len);
 };
