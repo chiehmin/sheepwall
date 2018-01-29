@@ -25,7 +25,7 @@ private:
 	static const std::vector<std::string> passwdFields;
 	static const std::vector<std::string> sessionFields;
 
-	bool IsContainFields(std::string content, std::vector<std::string> fields);
+	static bool IsContainFields(const std::string &content, const std::vector<std::string> &fields);
 
 	std::string method_;
 	std::string path_;
