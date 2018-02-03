@@ -19,8 +19,11 @@ before_install:
   - make -j4
   - sudo make install
   - cd "${TRAVIS_BUILD_DIR}"
+  # cpp-coveralls
+  - pip install --user cpp-coveralls
 
 script:
   - CXX=g++-5 make x86 -j4
   - build/test/unit_test
+  - coveralls --exclude test --exclude external --exclude googletest-release-1.8.0 --build-root . --gcov-options '\-lp'
 

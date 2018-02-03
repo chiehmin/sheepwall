@@ -24,16 +24,20 @@ build/x86/%.o: src/%.cc
 
 # test
 TEST_SOURCES=$(shell find test -name "*.cc")
-TEST_OBJECTS=$(addprefix build/test/, $(TEST_SOURCES:test/%.cc=%.o)) $(filter-out build/x86/main.o, $(X86_OBJECTS))
-TEST_CXXFLAGS := $(CXXFLAGS)
+TEST_OBJECTS := $(addprefix build/test/, $(TEST_SOURCES:test/%.cc=%.o) $(filter-out main.o, $(SOURCES:src/%.cc=%.o)))
+TEST_CXXFLAGS := $(CXXFLAGS) --coverage
 TEST_LDFLAGS := $(LDFLAGS)
-TEST_LDLIBS := $(LDLIBS) -lgtest -lgtest_main
+TEST_LDLIBS := $(LDLIBS) -lgtest -lgtest_main -lgcov
 
 build/test/unit_test: $(TEST_OBJECTS)
 	$(CXX) $(TEST_CXXFLAGS) $(LDFLAGS) -o $@ $^ $(TEST_LDLIBS)
 
 build/test/%.o: test/%.cc
-	if [ ! -d build/test ]; then mkdir -p build/test; fi
+	if [ ! -d `dirname $@` ]; then mkdir -p `dirname $@`; fi
+	$(CXX) $(TEST_CXXFLAGS) -o $@ -c $<
+
+build/test/%.o: src/%.cc
+	if [ ! -d `dirname $@` ]; then mkdir -p `dirname $@`; fi
 	$(CXX) $(TEST_CXXFLAGS) -o $@ -c $<
 
 # ARM target

@@ -3,3 +3,8 @@ unit_test
 *.o
 *.d
 tags
+
+# gcov related files
+*.gcov
+*.gcda
+*.gcno
