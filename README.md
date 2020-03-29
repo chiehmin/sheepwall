@@ -16,7 +16,7 @@ Features:
 
 Just run the sheepwall and wait for the sheep to come in :).
 
-[![asciicast](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB.png)](https://asciinema.org/a/35e6JGtbVK5igSeFd6I4bvqXB)
+[![asciicast](https://asciinema.org/a/ayK4s4YQ8wf934OIDfP1wWskT.svg)](https://asciinema.org/a/ayK4s4YQ8wf934OIDfP1wWskT)
 
 ## Usage
 
