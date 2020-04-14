@@ -45,11 +45,11 @@ bool Http::IsCredz()
 		IsContainFields(cookie_, sessionFields);
 }
 
-bool Http::IsContainFields(string content, vector<string> fields)
+bool Http::IsContainFields(const string &content, const vector<string> &fields)
 {
-	boost::algorithm::to_lower(content);
-	for (auto &field : fields) {
-		if (string::npos != content.find(field)) {
+	auto lower_content = boost::to_lower_copy<string>(content);
+	for (const auto &field : fields) {
+		if (string::npos != lower_content.find(field)) {
 			return true;
 		}
 	}
